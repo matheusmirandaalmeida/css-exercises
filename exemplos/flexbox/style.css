@@ -2,37 +2,47 @@
     display: flex; /*Para indentificar que a tag será o container flexbox*/
     flex-direction: row; /* Qual é a direção do eixo (row or column) */
     justify-content: center; /*Para alinhar o os elementos do eixo principal*/
-    flex-wrap: wrap; /* para decidir se os elementos irá para a linha de baixo*/
-    align-content: space-between; /*Para alinhar os elementos no eixo perpendicular */
-    gap: 2px;
+    flex-wrap: nowrap; /* para decidir se os elementos irá para a linha de baixo*/
+    align-items: center;
+    align-content: center; /*Para alinhar os elementos no eixo perpendicular */
+    gap: 3px; /* Espaço entre os elementos (linha e coluna).*/
 
     background-color: burlywood;
     padding: 10px;
     width: 300px;
-    height: 300px;
+    height: 200px;
     margin: 0 auto;
 }
 
-.bloco-1 {
-    background-color: aqua;
+.bloco-1, .bloco-2, .bloco-3 {
     padding: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+}
+
+.bloco-1 {
+    background-color: rgb(34, 101, 189);
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: flex-start;
 }
 
 .bloco-2 {
-    background-color: rgb(115, 32, 209);
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 5%;
+    background-color: rgb(207, 51, 30);
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: flex-end;
 }
 
 .bloco-3 {
-    background-color: rgb(224, 52, 224);
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 5%;
+    background-color: rgb(68, 196, 29);
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
